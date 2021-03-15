@@ -12,14 +12,10 @@ export default class Bomb extends React.Component {
           secondsLeft: props.initialCount
         }
       }
-      countdown = () => {
-        // console.log(`before setState: ${this.state.secondsLeft}`)
-    
+      countdown = () => {  
         this.setState({
             secondsLeft: this.state.secondsLeft - 1
         })
-    
-        // console.log(`after setState: ${this.state.count}`)
         setTimeout(this.countdown,1000)
       }
 
